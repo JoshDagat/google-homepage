@@ -1,0 +1,91 @@
+header {
+    display: flex;
+    flex-direction: column;
+    padding: 1em 2em;
+}
+a{
+    text-decoration: none;
+}
+a:hover{
+    text-decoration: underline;
+}
+
+button{
+    border: none;
+    background-color: inherit;
+}
+
+
+
+
+.hdr-top{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.logo-wrapper{
+    display: inline-block;
+    flex: 0 1;
+    margin-right: 3em;
+}
+
+.logo__img{
+    min-width: 100px;
+    max-width: 25%;
+}
+
+.search-box{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid rgb(185, 184, 184);
+    border-radius: 25px;
+    padding: 0.5em 1em;
+    max-height: 10%;
+    margin-right: auto;
+    width: 50%;
+}
+
+input[type="text"]{
+    border: none;
+    width: 100%;
+}
+input[type="text"]:focus{
+    outline: none;
+}
+
+.hdr__useful-links{
+    display: flex;
+    align-items: center;
+    gap: 1.5em;
+}
+
+.header__user{
+    border-radius: 100%;
+}
+
+.hdr-btm{
+    display: flex;
+    gap: 1em;
+}
+.btn-content, .label-content{
+    display: flex;
+    gap: 0.5em;
+    color: red;
+    margin-bottom: 0.5em;
+}
+
+.selected{
+    height: 3px;
+    width: 100%;
+    background-color: aqua;
+}
+
+#more, #tools{
+    display: none;
+}
+
+label[for="more"], label[for="tools"]{
+    display: flex;
+}
