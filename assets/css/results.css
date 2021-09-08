@@ -180,6 +180,10 @@ label[for="more"], label[for="tools"]{
 
 /* VIDEO SECTION */
 
+.video-wrapper{
+    margin-bottom: 5em;
+}
+
 .vid-header{
     display: flex;
     align-items: center;
@@ -274,6 +278,36 @@ label[for="more"], label[for="tools"]{
 .video-moments span{
     margin-right: auto;
 }
+
+.dmy{
+    border-bottom: 1px solid rgba(128, 128, 128, 0.575);
+    padding-bottom: 0.5em;
+    margin-bottom: 1em;
+}
+
+.vid-view-all{
+    border: 1px solid rgba(0, 0, 0, 0.377);
+    padding: 0.5em 2em 0.5em 1em;
+    border-radius: 25px;
+    max-width: 250px;
+    width: 100%;
+    position: relative;
+    top: 28px;
+    left: 150px;
+    background-color: white;
+}
+
+.vid-view-all div{
+    display: flex;
+    justify-content: center;
+    gap:1em;
+}
+
+.vid-view-all div span{
+    margin-left: auto;
+    margin-right: auto;
+}
+
 
 
 /* width="560" height="315" */
