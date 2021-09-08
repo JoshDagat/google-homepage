@@ -97,7 +97,7 @@ label[for="more"], label[for="tools"]{
 
 .parent-wrapper{
     padding-left: 15%;
-    max-width: 45%;
+    max-width: 55%;
 }
 
 .search-stats{
@@ -107,3 +107,75 @@ label[for="more"], label[for="tools"]{
     margin-bottom: 2em;
     display: inline-block;
 }
+
+.sub-lnk{
+    font-size: 14px;
+    margin-bottom: 0.5em;
+    color: gray;
+}
+
+.sub-lnk a{
+    color: inherit;
+}
+
+.sub-arrow{
+    font-size: 14px;
+    margin-left: 0.2em;
+}
+
+.lnk-main{
+    font-size: 20px;
+    color: blue;
+}
+
+.site-preview{
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.site-preview span{
+    font-weight: 700;
+}
+.page-stats{
+    font-size: 14px;
+}
+
+/* ALSO SECTION */
+
+.also-wrapper{
+    margin-top: 3em;
+    margin-bottom: 3em;
+}
+.also-title{
+    font-size: 22px;
+    line-height: 1.27;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.582);
+    padding-bottom: 0.2em
+}
+.also-item{
+    display:flex;
+    align-items: center;
+    padding: 0.5em 0;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.582);
+}
+
+.also-item:last-child{
+    position:relative;
+}
+.also-item-title{
+    font-size: 1em;
+    margin-right: auto;
+    font-weight: 200;
+}
+
+.feedback{
+    position: absolute;
+    font-size: 12px;
+    bottom: -8px;
+    right: 0;
+    background: white;
+    padding-left: 0.8em ;
+    color: gray;
+}
+
+
