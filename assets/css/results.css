@@ -1,3 +1,7 @@
+html{
+    font-family: Arial, sans-serif
+}
+
 header {
     display: flex;
     flex-direction: column;
@@ -65,9 +69,10 @@ input[type="text"]:focus{
     border-radius: 100%;
 }
 
-.hdr-btm{
+.focus-menu{
     display: flex;
     gap: 1em;
+    margin-bottom: 1em;
 }
 .btn-content, .label-content{
     display: flex;
@@ -88,4 +93,17 @@ input[type="text"]:focus{
 
 label[for="more"], label[for="tools"]{
     display: flex;
+}
+
+.parent-wrapper{
+    padding-left: 15%;
+    max-width: 45%;
+}
+
+.search-stats{
+    font-family: sans serif;
+    font-size: 14px;
+    color: grey;
+    margin-bottom: 2em;
+    display: inline-block;
 }
