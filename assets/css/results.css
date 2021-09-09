@@ -6,6 +6,19 @@ header {
     display: flex;
     flex-direction: column;
     padding: 1em 2em;
+    width: 100%;
+    background-color: white;
+    transition: 0.6s;
+    z-index: 99;
+}
+
+
+header.sticky{
+    position: fixed;
+    background-color: white;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    box-shadow: 0 4px 2px -2px rgb(190, 190, 190);
 }
 a{
     text-decoration: none;
@@ -51,6 +64,18 @@ button{
     width: 50%;
 }
 
+.search-box i.bi-x-lg,
+.search-box span{
+    color: #9b9b9b;
+    padding-right: 0.5em;
+}
+
+.search-btn{
+    padding: 0;
+    color: #4285F4;
+}
+
+
 input[type="text"]{
     border: none;
     width: 100%;
@@ -65,6 +90,9 @@ input[type="text"]:focus{
     gap: 1.5em;
 }
 
+.header__app-menu{
+    color: rgb(168, 168, 168);
+}
 .header__user{
     border-radius: 100%;
 }
@@ -79,30 +107,39 @@ input[type="text"]:focus{
     gap: 1em;
     margin-bottom: 1em;
 }
+
+.btn-content.blue{
+    color: #1A73E8
+}
 .btn-content, .label-content{
     display: flex;
     gap: 0.5em;
-    color: red;
+    color: #777A7F;
     margin-bottom: 0.5em;
 }
 
 .selected{
     height: 3px;
     width: 100%;
-    background-color: aqua;
+    background-color: #1f71dd;
 }
 
 #more, #tools{
     display: none;
 }
-
+.more{
+    margin-right: auto;
+}
+.tools{
+    color: #777A7F;
+}
 label[for="more"], label[for="tools"]{
     display: flex;
 }
 
 .parent-wrapper{
     padding-left: 15%;
-    max-width: 55%;
+    max-width: 60%;
 }
 
 .search-stats{
@@ -117,6 +154,8 @@ label[for="more"], label[for="tools"]{
     font-size: 14px;
     margin-bottom: 0.5em;
     color: gray;
+    display: flex;
+    align-items: center;
 }
 
 .sub-lnk a{
@@ -124,7 +163,6 @@ label[for="more"], label[for="tools"]{
 }
 
 .sub-arrow{
-    font-size: 14px;
     margin-left: 0.2em;
 }
 
@@ -319,6 +357,250 @@ label[for="more"], label[for="tools"]{
     font-size: 14px;
 }
 
+/* RELATED SEARCHES */
 
+.related-title{
+    font-size: 22px;
+    font-weight:400;
+    line-height: 28px;
+    border-bottom: 1px solid #b3afaf49;
+    padding-bottom: 0.5em;
+}
 
-/* width="560" height="315" */
+.related-hdr{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+
+.related-item-title{
+    font-size: 1em;
+    font-weight: 400;
+    margin-bottom: 1em;
+}
+
+.related-lnk-grp{
+    display:flex;
+    gap: 0.5em;
+    padding-bottom: 2em;
+}
+
+.related__img-div{
+    max-width: 120px;
+    min-height: 100px;
+    display: flex;
+    border: 1px solid grey;
+    border-radius: 15px;
+    margin-bottom: 0.8em;
+}
+
+.related__img-div img{
+    width: 100%;
+    object-fit: cover;
+    border-radius: inherit;
+}
+.related-lnk{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.related-lnk a {
+    color: black;
+    font-size: 14px;
+}
+.related-view-all{
+    border: 1px solid #b3afaf49;
+    padding: 0.5em 2em 0.5em 1em;
+    border-radius: 15px;
+    width: 100%;
+    max-width: 250px;
+}
+
+.related-view-all div{
+    display: flex;
+    justify-content: center;
+}
+
+.related-view-all i, .related-view-all span{
+    font-size: 16px;
+    color: blue;
+}
+
+.related-view-all span{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.view-wrap{
+    display: flex;
+    justify-content: center;
+    padding-bottom: 1em;
+    border-bottom: 1px solid black;
+    margin-bottom: 0.5em;
+}
+
+.closed-related{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid black;
+    padding-bottom: 0.5em;
+    margin-bottom: 0.5em;
+}
+.closed-img-div{
+    max-width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 1em;
+    min-height: 50px;
+}
+
+.closed-img-div img{
+    width: 100%;
+}
+
+.closed-related i {
+    margin-left: auto;
+}
+
+.closed-related h3 {
+    font-weight: 400;
+    font-size: 1em;
+}
+
+.canva{
+    position: relative;
+}
+
+.closed-feedback{
+    font-size: 12px;
+    position: absolute;
+    bottom: -7px;
+    right: 0;
+    background-color: white;
+    padding-left: 0.5em;
+}
+
+/* Suggestions Section */
+
+.search-suggestions{
+    display: grid;
+    grid-template-columns: 1fr 1fr ;
+    gap: 1em;
+    margin-bottom: 5em;
+}
+.suggestion{
+    display: flex;
+    align-items: center;
+    padding-left: 1em;
+    border-radius: 25px;
+    min-height: 50px;
+    background-color: #F1F3F4;
+}
+
+.suggestion span{
+    font-weight: 700;
+    padding: 0.2em;
+    padding-left: 1em;
+}
+
+.suggestion span .norm{
+    font-weight: 400;
+    padding: 0;
+}
+
+/* INDEX */
+
+.foogle-page-index{
+    display: flex;
+    justify-content: center;
+    gap: 1px;
+    margin-bottom: 5em;
+}
+
+.foogle-page-index span{
+    display: flex;
+    flex-direction: column;
+    align-items: center ;
+    gap: 5px;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.foogle-page-index span a{
+    font-size: 14px;
+}
+
+.foogle-page-index span:first-child,.foogle-page-index span:nth-child(12){
+    color: #4285F4
+}
+
+.foogle-page-index span:nth-child(2),.foogle-page-index span:nth-child(14){
+    color: #EA4335;
+}
+
+.foogle-page-index span{
+    color: #FBBC05
+}
+
+.foogle-page-index span:nth-child(13){
+    color: #34A853
+}
+
+.index-next i{
+    margin-bottom: 9px;
+}
+.index-next span{
+    font-size: 14px;
+    color:#4285F4
+}
+
+.index-next{
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* FOOTER */
+footer{
+    background-color: #F2F2F2;
+}
+
+.location{
+    font-size: 14px;
+    padding-top: 1.5em;
+    padding-bottom: 0.8em;
+    border-bottom: 1px solid #c7c7c7;
+    padding-left: 15%;
+    margin-bottom: 1em;
+}
+.location-city span{
+    color: #70757A;
+}
+
+.location-city{
+    padding-bottom:1em;
+    padding-top: 0.5em;
+    color: #3f3f3f;
+    font-weight: 700;
+    padding-left: 1em;
+    border-left: 1px solid #c7c7c7;
+}
+.ftr-links{
+    font-size: 14px;
+    list-style: none;
+    display: flex;
+    padding-left: 15%;
+    padding-bottom: 2em;
+    gap: 1em;
+}
+.ftr-dmy{
+    padding-top: 1em;
+    min-height: 1px;
+}
+
