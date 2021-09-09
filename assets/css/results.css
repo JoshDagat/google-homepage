@@ -71,10 +71,15 @@ button{
 }
 
 .search-btn{
-    padding: 0;
     color: #4285F4;
+    border-left: 1.5px solid #9b9b9b6c;
+    padding-left: 0.3em;
 }
 
+.search-btn div{
+    display: flex;
+    align-items: center;
+}
 
 input[type="text"]{
     border: none;
@@ -91,21 +96,21 @@ input[type="text"]:focus{
 }
 
 .header__app-menu{
-    color: rgb(168, 168, 168);
+    color: #a8a8a8;
 }
 .header__user{
     border-radius: 100%;
 }
 
-/* 1st search item */
+/* Focus Menu */
 
-.search-item{
-    margin-bottom: 2em;
-}
+
 .focus-menu{
+    padding-left: 15%;
     display: flex;
+    align-items: center;
     gap: 1em;
-    margin-bottom: 1em;
+    margin-bottom: 0.5em;
 }
 
 .btn-content.blue{
@@ -113,9 +118,9 @@ input[type="text"]:focus{
 }
 .btn-content, .label-content{
     display: flex;
+    align-items: center;
     gap: 0.5em;
     color: #777A7F;
-    margin-bottom: 0.5em;
 }
 
 .selected{
@@ -124,36 +129,43 @@ input[type="text"]:focus{
     background-color: #1f71dd;
 }
 
-#more, #tools{
-    display: none;
-}
 .more{
     margin-right: auto;
 }
 .tools{
+    display: flex;
+    align-items: center;
     color: #777A7F;
 }
-label[for="more"], label[for="tools"]{
-    display: flex;
+
+.border-dmy{
+    border-bottom: 1px solid #f1f1f1;
+    min-height: 1px;
+    width: 100%;
+    margin-bottom: 1em;
 }
+
+/* 1st search item */
 
 .parent-wrapper{
     padding-left: 15%;
     max-width: 60%;
 }
-
+.search-item{
+    margin-bottom: 2em;
+}
 .search-stats{
     font-family: sans serif;
     font-size: 14px;
     color: grey;
-    margin-bottom: 2em;
+    margin-bottom: 1em;
     display: inline-block;
 }
 
 .sub-lnk{
     font-size: 14px;
     margin-bottom: 0.5em;
-    color: gray;
+    color: black;
     display: flex;
     align-items: center;
 }
@@ -168,7 +180,7 @@ label[for="more"], label[for="tools"]{
 
 .lnk-main{
     font-size: 20px;
-    color: blue;
+    color: #0000ff;
 }
 
 .site-preview{
@@ -192,14 +204,14 @@ label[for="more"], label[for="tools"]{
 .also-title{
     font-size: 22px;
     line-height: 1.27;
-    border-bottom: 1px solid rgba(128, 128, 128, 0.582);
+    border-bottom: 1px solid rgba(128, 128, 128, 0.178);
     padding-bottom: 0.2em
 }
 .also-item{
     display:flex;
     align-items: center;
     padding: 0.5em 0;
-    border-bottom: 1px solid rgba(128, 128, 128, 0.582);
+    border-bottom: 1px solid rgba(128, 128, 128, 0.178);
 }
 
 .also-item:last-child{
@@ -363,7 +375,7 @@ label[for="more"], label[for="tools"]{
     font-size: 22px;
     font-weight:400;
     line-height: 28px;
-    border-bottom: 1px solid #b3afaf49;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.178);
     padding-bottom: 0.5em;
 }
 
@@ -391,7 +403,7 @@ label[for="more"], label[for="tools"]{
     max-width: 120px;
     min-height: 100px;
     display: flex;
-    border: 1px solid grey;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.178);
     border-radius: 15px;
     margin-bottom: 0.8em;
 }
@@ -412,7 +424,8 @@ label[for="more"], label[for="tools"]{
     font-size: 14px;
 }
 .related-view-all{
-    border: 1px solid #b3afaf49;
+    
+    border: 1px solid #a09d9d49;
     padding: 0.5em 2em 0.5em 1em;
     border-radius: 15px;
     width: 100%;
@@ -438,7 +451,7 @@ label[for="more"], label[for="tools"]{
     display: flex;
     justify-content: center;
     padding-bottom: 1em;
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.178);
     margin-bottom: 0.5em;
 }
 
@@ -446,7 +459,8 @@ label[for="more"], label[for="tools"]{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.178);
+
     padding-bottom: 0.5em;
     margin-bottom: 0.5em;
 }
@@ -604,3 +618,10 @@ footer{
     min-height: 1px;
 }
 
+.grey{
+    color: #858585;
+}
+
+p{
+    color: #292a2c;
+}
