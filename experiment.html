@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .body{
+            height: 100vh;
+        }
+        .contentBx{
+            max-width: 400px;
+        }
+        .contentBx .label{
+            border: 1px solid green;
+            cursor: pointer;
+        }
+    
+        .contentBx::after{
+            content:'';
+            height: 0;
+            transition: height 0.3s linear;
+            max-height: 50px;
+        }
+    
+        .contentBx.active::after{
+            height: 50px;
+            transition: height 0.3s linear, max-height 0s 0.3s linear;
+            max-height: 0px;
+        }
+    
+        .contentBx .content{
+            border: 1px solid red;
+            overflow: hidden;
+            margin-bottom: -2000px;
+            transition: margin-bottom  0.3s cubic-bezier(1,0,1,1),
+                        visibility 0s 0.3s, max-height 0s 0.3s;
+            visibility: hidden;
+            max-height: 0;
+            background-color: antiquewhite;
+        }
+    
+        .contentBx.active .content{
+            transition: margin-bottom 0.3s cubic-bezier(0,0,0,1);
+            margin-bottom: 0;
+            max-height: 1000000px;
+            visibility: visible;
+        }
+    
+        .collapsible-wrapper{
+            display: flex;
+            overflow: hidden;
+        }
+        .collapsible-wrapper:after{
+            content:'';
+            height: 50px;
+            transition: height 0.3s linear, max-height 0s 0.3s linear;
+            max-height: 0px;
+        }
+        .collapsible{
+            transition: margin-bottom 0.3s cubic-bezier(0,0,0,1);
+            margin-bottom: 0;
+            max-height: 1000000px;
+        }
+        .collapsible-wrapper.collapsed > .collapsible{
+            margin-bottom: -2000px;
+            transition: margin-bottom 0.3s cubic-bezier(1,0,1,1), visibility 0s 0.3s, max-height 0s 0.3s;
+            visibility: hidden;
+            max-height: 0;
+        }
+        .collapsible-wrapper.collapsed:after{
+            height: 0;
+            transition: height 0.3s linear;
+            max-height: 50px;
+        }
+    </style>
+</head>
+
+
+<body>
+    <!-- <div class="contentBx">
+        <div class="label">This is the label</div>
+        <div class="content">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio sunt sint quasi aspernatur beatae excepturi? Cumque nostrum quis in placeat praesentium, quidem asperiores, et minima alias recusandae corrupti unde voluptates architecto voluptatibus, a vel corporis. Laboriosam tenetur veniam minus, dolores sapiente quibusdam fuga fugiat officia iusto dicta, numquam earum voluptates veritatis ut quam alias. Possimus laborum iusto expedita optio ratione. Ducimus cupiditate et laborum nemo, quo ullam minus accusamus dicta autem id cumque dolorem tempora magnam quas placeat enim? Distinctio quam culpa laborum similique assumenda beatae, nihil voluptatem corporis? Provident soluta accusamus delectus consequuntur ab, labore eius distinctio enim dolor!</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet dolorum corrupti nemo delectus tenetur, dolore sunt aperiam amet, explicabo neque mollitia qui quia excepturi iure natus facilis, odio distinctio. Reprehenderit at laborum facilis assumenda quas delectus sit hic vel excepturi velit maxime, iusto officiis corporis tempora modi voluptatibus ad ab. Illo nam eaque porro fugit id officiis iure? Labore autem veniam molestias quas accusantium repudiandae, nesciunt provident at id molestiae, facilis saepe esse odio. Omnis ab, fugit quos error aliquid delectus voluptas voluptate ducimus libero. Suscipit, exercitationem ducimus natus, veniam facere consequuntur, architecto laborum aspernatur iste accusamus harum velit non?</p>
+        </div>
+    </div> -->
+    <div id="toggler" class="menu-item toggler">Hakuna Matata</div>
+    <div id="collapsible-wrapper"class="collapsible-wrapper collapsed">
+        <div class="collapsible">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio sunt sint quasi aspernatur beatae excepturi? Cumque nostrum quis in placeat praesentium, quidem asperiores, et minima alias recusandae corrupti unde voluptates architecto voluptatibus, a vel corporis. Laboriosam tenetur veniam minus, dolores sapiente quibusdam fuga fugiat officia iusto dicta, numquam earum voluptates veritatis ut quam alias. Possimus laborum iusto expedita optio ratione. Ducimus cupiditate et laborum nemo, quo ullam minus accusamus dicta autem id cumque dolorem tempora magnam quas placeat enim? Distinctio quam culpa laborum similique assumenda beatae, nihil voluptatem corporis? Provident soluta accusamus delectus consequuntur ab, labore eius distinctio enim dolor!</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet dolorum corrupti nemo delectus tenetur, dolore sunt aperiam amet, explicabo neque mollitia qui quia excepturi iure natus facilis, odio distinctio. Reprehenderit at laborum facilis assumenda quas delectus sit hic vel excepturi velit maxime, iusto officiis corporis tempora modi voluptatibus ad ab. Illo nam eaque porro fugit id officiis iure? Labore autem veniam molestias quas accusantium repudiandae, nesciunt provident at id molestiae, facilis saepe esse odio. Omnis ab, fugit quos error aliquid delectus voluptas voluptate ducimus libero. Suscipit, exercitationem ducimus natus, veniam facere consequuntur, architecto laborum aspernatur iste accusamus harum velit non?</p>
+        </div>
+    </div>
+    <script>
+        const accordion = document.getElementsByClassName('contentBx');
+
+        for(i=0;i<accordion.length;i++){
+            accordion[i].addEventListener('click', function(){
+                this.classList.toggle('active')
+            })
+        }
+
+        
+        const toggler = document.getElementById('collapsible-wrapper');
+        toggler.addEventListener('click', function(){
+            this.classList.toggle('collapsed')
+        })
+    </script>
+</body>
+</html>
