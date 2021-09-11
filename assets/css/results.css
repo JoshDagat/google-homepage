@@ -162,7 +162,8 @@ input[type="text"]:focus{
 
 .parent-wrapper{
     padding-left: 15%;
-    max-width: 60%;
+    width:60%;
+    max-width: 900px;
 }
 .search-item{
     margin-bottom: 2em;
@@ -329,10 +330,18 @@ input[type="text"]:focus{
 }
 /* VIDEO SECTION */
 
+
 .key-moments{
     display: flex;
     justify-content: space-between;
     width: 100%;
+    overflow-y: auto;
+ }
+
+.moment{
+    width: 120px;
+    padding: 10px;
+    border-right: 1px solid rgba(0, 0, 0, 0.068);
 }
 .moment a span{
     display: flex;
@@ -340,6 +349,48 @@ input[type="text"]:focus{
     font-size: 14px;
 }
 
+.progress-bar{
+    height: 4px;
+    width: 100%;
+    max-width: 580px;
+    background-color: #D5E4FD;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 1em;
+    justify-content: space-between;
+}
+
+.progress-bar-nut{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 99;
+}
+
+.progress-bar-nut.active{
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    background-color: #d9e4f8;
+    border: 1px solid rgba(0, 0, 0, 0.041);
+
+}
+
+.nut-core{
+    background-color: #94B9ED;
+}
+.progress-bar-nut.active .nut-core{
+    height: 8px;
+    width: 8px;
+    border-radius: 50%;
+    background-color: #1967D2;
+}
+
+.progress-bar-nut .nut-core{
+    height:4px;
+    width: 4px;
+}
 
 /*  */
 
@@ -420,7 +471,7 @@ input[type="text"]:focus{
 
 .video-moments{
     display: flex;
-    background-color: aquamarine;
+    background-color: #F0F6FD;
     padding: 0.5em 1.5em 0.5em 1em ;
     border-radius: 10px;
     position: relative;
